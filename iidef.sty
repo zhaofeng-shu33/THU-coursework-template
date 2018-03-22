@@ -1,0 +1,56 @@
+%% Definitions for Inference and Information
+%% UPDATE: 22/03/2018  by zhaofeng-shu33
+%% This package does not require other packages
+\ProvidesPackage{iidef}
+% semester
+\newcommand{\theterm}[1]{#1}
+\newcommand{\thecourseinstitute}[1]{#1}
+\newcommand{\thecoursename}[1]{\textsc{#1}}
+
+\newcommand{\courseheader}[3]{
+\vspace*{-1in}
+\begin{center}
+\thecourseinstitute{#1}\\
+\thecoursename{#3} \\
+\theterm{#2}
+\vspace*{0.1in}
+\hrule
+\end{center}
+}
+\def\v#1{\underline{#1}}
+
+\newcommand{\uc}{\underline{c}}    % c, vec
+\newcommand{\uv}{\underline{v}}    % x, vec
+\newcommand{\uw}{\underline{w}}    % w, vec
+\newcommand{\ux}{\underline{x}}    % x, vec
+\newcommand{\uy}{\underline{y}}    % y, vec
+\newcommand{\uz}{\underline{z}}    % z, vec
+\newcommand{\um}{\underline{m}}    % m, vec
+\newcommand{\rvx}{\mathsf{x}}    % x, r.v.
+\newcommand{\rvy}{\mathsf{y}}    % y, r.v.
+\newcommand{\rvz}{\mathsf{z}}    % z, r.v.
+\newcommand{\rvw}{\mathsf{w}}    % w, r.v.
+\newcommand{\rvH}{\mathsf{H}}    % H, r.v.
+\newcommand{\urvx}{\underline{\mathsf{x}}}    % x, r.v. vec
+\newcommand{\urvy}{\underline{\mathsf{y}}}    % y, r.v. vec
+\newcommand{\urvz}{\underline{\mathsf{z}}}    % z, r.v. vec
+\newcommand{\urvw}{\underline{\mathsf{w}}}    % w, r.v. vec
+
+\newcommand{\defas}{\triangleq} %\coloneqq
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\TT}{\mathrm{T}}    % transpose
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argsup}{arg\,sup}
+\DeclareMathOperator*{\arginf}{arg\,inf}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\MSE}{MSE}
+\DeclareMathOperator{\1}{\mathds{1}}
+\DeclareMathOperator{\In}{\mathbb{I}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Prob}{\mathbb{P}}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\endinput
