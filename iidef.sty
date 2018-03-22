@@ -1,11 +1,24 @@
 %% GPL v2.1
 %% UPDATE: 22/03/2018  by zhaofeng-shu33
-%% This package does not require other packages
+%% This package requires package kvoptions,enumitems
 \ProvidesPackage{iidef}
 % semester
 \newcommand{\theterm}[1]{#1}
 \newcommand{\thecourseinstitute}[1]{#1}
 \newcommand{\thecoursename}[1]{\textsc{#1}}
+
+\RequirePackage{enumitem}
+\RequirePackage{kvoptions}
+
+% \iidef@thehwcnt = 1
+\DeclareStringOption[1]{thehwcnt}
+\ProcessKeyvalOptions*
+\def\thehwcnt{\iidef@thehwcnt}
+% enumitem related configuration
+\setlist[enumerate,1]{label=\thehwcnt.\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=\roman*.}
+\setlist[enumerate,4]{label=\greek*)}
 
 \newcommand{\courseheader}[3]{
 \vspace*{-1in}
@@ -16,9 +29,11 @@
 \vspace*{0.1in}
 \hrule
 \end{center}
+\begin{center}
+  \underline{\bf Homework \thehwcnt} \\
+\end{center}
 }
 \def\v#1{\underline{#1}}
-
 \newcommand{\uc}{\underline{c}}    % c, vec
 \newcommand{\uv}{\underline{v}}    % x, vec
 \newcommand{\uw}{\underline{w}}    % w, vec
@@ -53,4 +68,18 @@
 \DeclareMathOperator{\Prob}{\mathbb{P}}
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\newcommand{\name}[1]{
+\begin{flushleft}
+  #1\hfill
+  \today
+\end{flushleft}
+\hrule
+
+\vspace{2em}
+
+\flushleft
+\rule{\textwidth}{1pt}
+}
+
 \endinput

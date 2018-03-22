@@ -1,5 +1,7 @@
+% Sample tex file for usage of iidef.sty
 % Homework template for Inference and Information
 % UPDATE: October 12, 2017 by Xiangxiang
+% UPDATE: 22/03/2018 by zhaofeng-shu33
 \documentclass[a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, amsthm}
@@ -7,15 +9,14 @@
 \usepackage{moreenum}
 \usepackage{mathtools}
 \usepackage{url}
-\usepackage{enumitem}
+
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{booktabs} % toprule
 \usepackage[mathcal]{eucal}
 \usepackage{dsfont}
-\usepackage[numbered,framed]{matlab-prettifier}
-\usepackage{iidef}
 
+\usepackage[numbered,framed]{matlab-prettifier}
 \lstset{
   style              = Matlab-editor,
   captionpos         =b,
@@ -23,31 +24,22 @@
   escapechar         = ",
   mlshowsectionrules = true,
 }
+
+\usepackage[thehwcnt = 6]{iidef}
+
 \begin{document}
+
 \courseheader{Tsinghua-Berkley ShenZhen Institute}{Fall 2017}{Inference and Information}
 
 
 
-\newcounter{hwcnt}
-\setcounter{hwcnt}{2} % set to the times of Homework
 
-\begin{center}
-  \underline{\bf Homework \thehwcnt} \\
-\end{center}
-\begin{flushleft}
-  YOUR NAME\hfill
-  \today
-\end{flushleft}
-\hrule
 
-\vspace{2em}
-\setlist[enumerate,1]{label=\thehwcnt.\arabic*.}
-\setlist[enumerate,2]{label=(\alph*)}
-\setlist[enumerate,3]{label=\roman*.}
-\setlist[enumerate,4]{label=\greek*)}
 
-\flushleft
-\rule{\textwidth}{1pt}
+
+%Print name and date of compilation
+\name{YOUR NAME}
+
 \begin{itemize}
 \item {\bf Acknowledgments: \/} 
   This template takes some materials from course CSE 547/Stat 548 of Washington University: \small{\url{https://courses.cs.washington.edu/courses/cse547/17sp/index.html}}.
