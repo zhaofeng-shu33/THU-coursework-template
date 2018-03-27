@@ -20,3 +20,6 @@ v1.4
 March 22, 2018 [zhaofeng-shu33]
 v2.0
 - Make it a latex package(.sty)
+
+v2.1
+- Use kvoptions to set the coursework counter.

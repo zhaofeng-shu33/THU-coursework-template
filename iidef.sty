@@ -1,14 +1,24 @@
 %% GPL v2.1
+%% version 2.1
 %% UPDATE: 22/03/2018  by zhaofeng-shu33
 %% This package requires package kvoptions,enumitems
 \ProvidesPackage{iidef}
 % semester
-\newcommand{\theterm}[1]{#1}
-\newcommand{\thecourseinstitute}[1]{#1}
-\newcommand{\thecoursename}[1]{\textsc{#1}}
+\def\@term{term}
+\newcommand{\theterm}[1]{\renewcommand\@term{#1}}
+% institute
+\newcommand{\@courseinstitute}[1]{institute}
+\newcommand{\thecourseinstitute}[1]{\renewcommand\@courseinstitute{#1}}
+% coursename
+\newcommand{\@coursename}[1]{coursename}
+\newcommand{\thecoursename}[1]{\renewcommand\@coursename{\textsc{#1}}}
 
+% configuration of nested enumerate env
 \RequirePackage{enumitem}
+% set hwcount key-value option
 \RequirePackage{kvoptions}
+% required by macro DeclareMathOperator
+\RequirePackage{amsmath}
 
 % \iidef@thehwcnt = 1
 \DeclareStringOption[1]{thehwcnt}
@@ -20,12 +30,21 @@
 \setlist[enumerate,3]{label=\roman*.}
 \setlist[enumerate,4]{label=\greek*)}
 
-\newcommand{\courseheader}[3]{
+% Set up page headers using with fancyhdr
+\RequirePackage{fancyhdr}
+\fancypagestyle{runningpage}
+{
+  \fancyhead[L]{\small\@coursename}
+  \fancyhead[R]{\small\@courseinstitute}
+}
+
+\newcommand{\courseheader}{
+\thispagestyle{plain}
 \vspace*{-1in}
 \begin{center}
-\thecourseinstitute{#1}\\
-\thecoursename{#3} \\
-\theterm{#2}
+\@courseinstitute\\
+\@coursename\\
+\@term
 \vspace*{0.1in}
 \hrule
 \end{center}
@@ -33,6 +52,8 @@
   \underline{\bf Homework \thehwcnt} \\
 \end{center}
 }
+
+\pagestyle{runningpage}
 \def\v#1{\underline{#1}}
 \newcommand{\uc}{\underline{c}}    % c, vec
 \newcommand{\uv}{\underline{v}}    % x, vec
