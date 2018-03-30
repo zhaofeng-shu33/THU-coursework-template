@@ -1,6 +1,6 @@
 %% GPL v2.1
 %% version 2.1
-%% UPDATE: 22/03/2018  by zhaofeng-shu33
+%% UPDATE: 30/03/2018  by zhaofeng-shu33
 %% This package requires package kvoptions,enumitems
 \ProvidesPackage{iidef}
 % semester
@@ -22,6 +22,7 @@
 
 % \iidef@thehwcnt = 1
 \DeclareStringOption[1]{thehwcnt}
+
 \ProcessKeyvalOptions*
 \def\thehwcnt{\iidef@thehwcnt}
 % enumitem related configuration
@@ -37,6 +38,7 @@
   \fancyhead[L]{\small\@coursename}
   \fancyhead[R]{\small\@courseinstitute}
 }
+% user rewrite Homework name
 \def\@hwname{Homework}
 \def\hwname#1{\renewcommand\@hwname{#1}}
 
@@ -102,7 +104,22 @@
 \vspace{2em}
 
 \flushleft
-\rule{\textwidth}{1pt}
+}
+
+%define the solution env with amsthm proof
+\RequirePackage{amsthm}
+
+\def\@slname{Solution}
+\def\slname#1{\renewcommand\@slname{#1}}
+
+\newenvironment{solution}
+{
+\proof[\@slname]
+}
+{
+% no qed symbol in solution env
+\renewcommand{\qedsymbol}{}
+\endproof
 }
 
 \endinput
