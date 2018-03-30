@@ -1,5 +1,5 @@
 %% GPL v2.1
-%% version 2.1
+%% version 2.3
 %% UPDATE: 30/03/2018  by zhaofeng-shu33
 %% This package requires package kvoptions,enumitems
 \ProvidesPackage{iidef}
@@ -31,19 +31,14 @@
 \setlist[enumerate,3]{label=\roman*.}
 \setlist[enumerate,4]{label=\greek*)}
 
-% Set up page headers using with fancyhdr
-\RequirePackage{fancyhdr}
-\fancypagestyle{runningpage}
-{
-  \fancyhead[L]{\small\@coursename}
-  \fancyhead[R]{\small\@courseinstitute}
-}
-% user rewrite Homework name
+% user can rewrite homework name
 \def\@hwname{Homework}
 \def\hwname#1{\renewcommand\@hwname{#1}}
 
+% page header setup, distinguish between first page(plain style) and second page on (runningpage style)
+%*****************************************************************************************************
 \newcommand{\courseheader}{
-\thispagestyle{plain}
+\thispagestyle{plain}%first page use native plain style to suppress header
 \vspace*{-1in}
 \begin{center}
 \@courseinstitute\\
@@ -56,8 +51,19 @@
   \underline{\bf \@hwname\;\thehwcnt} \\
 \end{center}
 }
-
+% Set up page headers using with fancyhdr
+\RequirePackage{fancyhdr}
+\fancypagestyle{runningpage}
+{
+  \fancyhead[L]{\small\@coursename}
+  \fancyhead[R]{\small\@courseinstitute}
+}
+% use runningpage style from second page on 
 \pagestyle{runningpage}
+% *********************************************************************************************
+
+%common math symbols go here
+%*************************************************
 \def\v#1{\underline{#1}}
 \newcommand{\uc}{\underline{c}}    % c, vec
 \newcommand{\uv}{\underline{v}}    % x, vec
@@ -93,7 +99,10 @@
 \DeclareMathOperator{\Prob}{\mathbb{P}}
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+%************************************************************************************
 
+%name command macro
+%*************************
 \newcommand{\name}[1]{
 \begin{flushleft}
   #1\hfill
@@ -105,8 +114,10 @@
 
 \flushleft
 }
+%*************************
 
 %define the solution env with amsthm proof
+%******************************
 \RequirePackage{amsthm}
 
 \def\@slname{Solution}
@@ -121,5 +132,5 @@
 \renewcommand{\qedsymbol}{}
 \endproof
 }
-
+%******************************
 \endinput
