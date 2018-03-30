@@ -37,6 +37,8 @@
   \fancyhead[L]{\small\@coursename}
   \fancyhead[R]{\small\@courseinstitute}
 }
+\def\@hwname{Homework}
+\def\hwname#1{\renewcommand\@hwname{#1}}
 
 \newcommand{\courseheader}{
 \thispagestyle{plain}
@@ -49,7 +51,7 @@
 \hrule
 \end{center}
 \begin{center}
-  \underline{\bf Homework \thehwcnt} \\
+  \underline{\bf \@hwname\;\thehwcnt} \\
 \end{center}
 }
 
