@@ -14,8 +14,10 @@ pre_install_dep: $(INSTALL_PACKAGE)
 
 after_install_dep: install_dep
 	# tricky, to make variable assignment in recipe, and to execute shell command and assign the print result to a variable.
-	$(eval PLATFORM=`$(INSTALL_DIR)/install-tl --print-platform`)
-	export PATH=./texlive/bin/$(PLATFORM):$$PATH
+	$(eval PLATFORM1=`$(INSTALL_DIR)/install-tl --print-platform`)
+	$(eval PLATFORM2=$(shell echo $(PLATFORM)))
+	export PATH=./texlive/bin/$(PLATFORM2):$$PATH
+	echo $$PATH	
 	# to make tlmgr work, we need perl
 	tlmgr install xkeyval matlab-prettifier caption doublestroke xcolor listings l3kernel l3packages ms ulem fontspec environ trimspaces booktabs moreenum mathtools oberdiek enumitem fmtcount etoolbox latex-bin
 install_dep: pre_install_dep
@@ -35,3 +37,8 @@ iihw.pdf: iihw.tex after_install_dep
 ithw.pdf: ithw.tex after_install_dep
 	xelatex ithw.tex
 
+test:
+	$(eval PLATFORM1=`$(INSTALL_DIR)/install-tl --print-platform`)
+	$(eval PLATFORM2=$(shell echo $(PLATFORM)))
+	export PATH=./texlive/bin/$(PLATFORM2):$$PATH
+	echo $$PATH
