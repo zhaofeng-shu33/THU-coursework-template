@@ -15,7 +15,7 @@ pre_install_dep: $(INSTALL_PACKAGE)
 after_install_dep: install_dep
 	# tricky, to make variable assignment in recipe, and to execute shell command and assign the print result to a variable.
 	$(eval PLATFORM1=`$(INSTALL_DIR)/install-tl --print-platform`)
-	$(eval PLATFORM2=$(shell echo $(PLATFORM)))
+	$(eval PLATFORM2=$(shell echo $(PLATFORM1)))
 	export PATH=./texlive/bin/$(PLATFORM2):$$PATH
 	echo $$PATH	
 	# to make tlmgr work, we need perl
