@@ -1,4 +1,5 @@
 # THU coursework Template
+[![Build Status](https://www.travis-ci.org/zhaofeng-shu33/THU-coursework-template.svg?branch=master)](https://www.travis-ci.org/zhaofeng-shu33/THU-coursework-template)
 
 ## Features
 

@@ -24,11 +24,11 @@ v2.0
 v2.1
 - Use kvoptions to set the coursework counter.
 
-27/03/2018 
+27/03/2018 [zhaofeng-shu33]
 v2.2
 - Use fancyhdr to set the coursework user file header.
 
-30/03/2018 
+30/03/2018 [zhaofeng-shu33]
 v2.3
 - User configuration of Homework
 - Add solution environment

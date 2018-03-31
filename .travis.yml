@@ -1,0 +1,9 @@
+os:
+  - linux
+language: perl
+
+install:
+  - make after_install_dep
+
+script:
+  - make all
