@@ -14,7 +14,7 @@ pre_install_dep: $(INSTALL_PACKAGE)
 
 after_install_dep: install_dep
 	# a little bit tricky, since I set texlive bin path in system level in my previous full installation
-	PLATFORM = $($(INSTALL_DIR)/install-tl --print-platform)
+	export PLATFORM = $($(INSTALL_DIR)/install-tl --print-platform)
 	export PATH=./texlive/bin/$(PLATFORM):$(PATH)
 	# to make tlmgr work, we need perl
 	tlmgr install xkeyval matlab-prettifier caption doublestroke xcolor listings l3kernel l3packages ms ulem fontspec environ trimspaces booktabs moreenum mathtools oberdiek enumitem fmtcount etoolbox latex-bin
