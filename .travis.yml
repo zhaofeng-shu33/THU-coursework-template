@@ -1,6 +1,5 @@
 os:
   - linux
-language: perl
 
 script:
   - make all
