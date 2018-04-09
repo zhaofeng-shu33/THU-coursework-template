@@ -1,12 +1,16 @@
 # Makefile for thucoursework
 
 # Compiling method: xelatex/pdflatex
-
+PACKAGE = thucoursework
 INSTALL_PACKAGE = install-tl-unx.tar.gz
 INSTALL_DIR = ./install-texlive
+# automatic configuration of mirror
 REMOTE_INSTALLER_URL = http://mirror.ctan.org/systems/texlive/tlnet
+# Set opts for latexmk if you use it
+LATEXMKOPTS = -xelatex -halt-on-error -interaction=nonstopmode
 
-.PHONY: all pre_install_dep install_dep after_install_dep clean test
+
+.PHONY: doc all archive pre_install_dep install_dep after_install_dep clean test
 
 all: after_install_dep iihw.pdf ithw.pdf
 
@@ -37,6 +41,22 @@ iihw.pdf: iihw.tex after_install_dep
 
 ithw.pdf: ithw.tex after_install_dep
 	xelatex ithw.tex
+
+archieve:
+	# make tar.gz which is submitted to ctan.org
+	# first copy the necessary files to the dist dir
+	cp iidef.sty iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps README.md LICENSE.md update.md thucoursework/ 
+	# then tar it
+	tar -cvf thucoursework.tar.gz thucoursework/
+doc : $(PACKAGE).pdf
+
+$(PACKAGE).pdf : $(PACKAGE).dtx dtx-style.sty
+	#latexmk $(LATEXXMKOPTS) $(PACKAGE).dtx
+	xelatex $(PACKAGE).dtx
+	makeindex -s gind.ist -o $(PACKAGE).ind $(PACKAGE).idx
+	makeindex -s gglo.ist -o $(PACKAGE).gls $(PACKAGE).glo
+	xelatex $(PACKAGE).dtx
+	xelatex -synctex=1 $(PACKAGE).dtx
 
 test:
 	# first clear out root texlive bin dir

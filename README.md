@@ -27,4 +27,7 @@ Notice that the package itself does not import ctex package, to use it with Chin
 
  TA xiangxiangxu revised this template, zhaofeng-shu33 made it a latex package.
 
+## License
+ see [LICENSE.md](LICENSE.md) for detail.
+
 

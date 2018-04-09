@@ -1,42 +1,58 @@
-%% GPL v2.1
-%% version 2.3
-%% UPDATE: 30/03/2018  by zhaofeng-shu33
-%% This package requires package kvoptions,enumitems
-\ProvidesPackage{iidef}
-% semester
+%%
+%% This is file `iidef.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% thucoursework.dtx  (with options: `sty')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2018 by Ruini Xue <616545598@qq.com>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%% 
+%% To produce the documentation run the original source files ending with `.dtx'
+%% through LaTeX.
+%% 
+
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesClass{iidef}
+[2018/3/30 2.3 Tsinghua University Coursework Template]
+%% configuration of nested enumerate env
+\RequirePackage{enumitem}
+%% set hwcount key-value option
+\RequirePackage{kvoptions}
+%% required by macro DeclareMathOperator
+\RequirePackage{amsmath}
+%% Set up page headers using with fancyhdr
+\RequirePackage{fancyhdr}
+\RequirePackage{amsthm}
+%% semester
 \def\@term{term}
 \newcommand{\theterm}[1]{\renewcommand\@term{#1}}
-% institute
+%% institute
 \newcommand{\@courseinstitute}[1]{institute}
 \newcommand{\thecourseinstitute}[1]{\renewcommand\@courseinstitute{#1}}
-% coursename
+%% coursename
 \newcommand{\@coursename}[1]{coursename}
 \newcommand{\thecoursename}[1]{\renewcommand\@coursename{\textsc{#1}}}
-
-% configuration of nested enumerate env
-\RequirePackage{enumitem}
-% set hwcount key-value option
-\RequirePackage{kvoptions}
-% required by macro DeclareMathOperator
-\RequirePackage{amsmath}
-
-% \iidef@thehwcnt = 1
-\DeclareStringOption[1]{thehwcnt}
-
-\ProcessKeyvalOptions*
-\def\thehwcnt{\iidef@thehwcnt}
-% enumitem related configuration
-\setlist[enumerate,1]{label=\thehwcnt.\arabic*.}
-\setlist[enumerate,2]{label=(\alph*)}
-\setlist[enumerate,3]{label=\roman*.}
-\setlist[enumerate,4]{label=\greek*)}
-
-% user can rewrite homework name
+%% user can rewrite homework name
 \def\@hwname{Homework}
 \def\hwname#1{\renewcommand\@hwname{#1}}
-
-% page header setup, distinguish between first page(plain style) and second page on (runningpage style)
-%*****************************************************************************************************
+%% \iidef@thehwcnt = 1
+\DeclareStringOption[1]{thehwcnt}
+\ProcessKeyvalOptions*
+\def\thehwcnt{\iidef@thehwcnt}
+%% page header setup, distinguish between first page(plain style)
+%% and second page on (runningpage style)
+%%***************************************************************************
 \newcommand{\courseheader}{
 \thispagestyle{plain}%first page use native plain style to suppress header
 \vspace*{-1in}
@@ -51,19 +67,49 @@
   \underline{\bf \@hwname\;\thehwcnt} \\
 \end{center}
 }
-% Set up page headers using with fancyhdr
-\RequirePackage{fancyhdr}
 \fancypagestyle{runningpage}
 {
   \fancyhead[L]{\small\@coursename}
   \fancyhead[R]{\small\@courseinstitute}
 }
-% use runningpage style from second page on 
+%% use runningpage style from second page on
 \pagestyle{runningpage}
-% *********************************************************************************************
+%% *********************************************************************************************
+%%name command macro
+%%*************************
+\newcommand{\name}[1]{
+\begin{flushleft}
+  #1\hfill
+  \today
+\end{flushleft}
+\hrule
 
-%common math symbols go here
-%*************************************************
+\vspace{2em}
+
+\flushleft
+}
+%%*************************
+%% enumitem related configuration
+\setlist[enumerate,1]{label=\thehwcnt.\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=\roman*.}
+\setlist[enumerate,4]{label=\greek*}
+%%******************************
+\def\@slname{Solution}
+\def\slname#1{\renewcommand\@slname{#1}}
+
+\newenvironment{solution}
+{
+\proof[\@slname]
+}
+{
+%% no qed symbol in solution env
+\renewcommand{\qedsymbol}{}
+\endproof
+}
+%%******************************
+%%common math symbols go here
+%%*************************************************
 \def\v#1{\underline{#1}}
 \newcommand{\uc}{\underline{c}}    % c, vec
 \newcommand{\uv}{\underline{v}}    % x, vec
@@ -99,38 +145,4 @@
 \DeclareMathOperator{\Prob}{\mathbb{P}}
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
-%************************************************************************************
-
-%name command macro
-%*************************
-\newcommand{\name}[1]{
-\begin{flushleft}
-  #1\hfill
-  \today
-\end{flushleft}
-\hrule
-
-\vspace{2em}
-
-\flushleft
-}
-%*************************
-
-%define the solution env with amsthm proof
-%******************************
-\RequirePackage{amsthm}
-
-\def\@slname{Solution}
-\def\slname#1{\renewcommand\@slname{#1}}
-
-\newenvironment{solution}
-{
-\proof[\@slname]
-}
-{
-% no qed symbol in solution env
-\renewcommand{\qedsymbol}{}
-\endproof
-}
-%******************************
-\endinput
+%%************************************************************************************

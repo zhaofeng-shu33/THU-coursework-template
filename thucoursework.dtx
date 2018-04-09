@@ -1,0 +1,556 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 2018 by zhaofeng-shu33 <616545598@qq.com>
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% \fi
+%
+%\iffalse
+%<*internal>
+\begingroup
+\input docstrip.tex
+\askforoverwritefalse
+\showprogress
+\keepsilent
+\preamble
+
+This is a generated file.
+
+Copyright (C) \the\year by Ruini Xue <616545598@qq.com>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.3
+of this license or (at your option) any later version.
+The latest version of this license is in
+  http://www.latex-project.org/lppl.txt
+and version 1.3 or later is part of all distributions of LaTeX
+version 2005/12/01 or later.
+
+To produce the documentation run the original source files ending with `.dtx'
+through LaTeX.
+
+\endpreamble
+\nopostamble
+\generate{
+\file{iidef.sty}{\from{\jobname.dtx}{sty}}
+}
+
+\ifToplevel{%
+  \Msg{***********************************************************}
+  \Msg{*}
+  \Msg{* To produce the documentation run the files ending with}
+  \Msg{* `.dtx' through XeLaTeX.}
+  \Msg{*}
+  \Msg{* Happy TeXing!}
+  \Msg{***********************************************************}}
+\endgroup
+%</internal>
+%<*driver>
+\ProvidesFile{thucoursework.dtx}[2018/3/30 2.3 Tsinghua University Coursework Template]
+\documentclass{ltxdoc}
+\usepackage{dtx-style}
+
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+% \DoNotIndex{\NeedsTeXFormat,\ProvidesClass,\RequirePackage}
+% \DoNotIndex{\renewcommand,\underline,\newcommand,\def}
+% \DoNotIndex{\setlist,\hfill,\hrule,\vspace}
+% \DoNotIndex{\begin,\end,\DeclareStringOption}
+% \DoNotIndex{\fancypagestyle,\fancyhead,\pagestyle,\thispagestyle}
+% \DoNotIndex{\protect,\mathpalette,\rlap,\mathrel,\mkern}
+% \GetFileInfo{\jobname.dtx}
+%^^A theses changes are moved from update.md
+%^^A \changes{hversioni}{hdatei}{htexti}
+% \def\xiangxiang{\textit{Xiangxiang}}
+% \def\zhaofeng{\textit{zhaofeng-shu33}}
+% \changes{v1.1}{2017/09/26}{[\xiangxiang] Add mathcal and eucal package.}
+% \changes{v1.1}{2017/09/26}{[\xiangxiang] Add aligned equations in \texttt{iihw.tex}.}
+% \changes{v1.2}{2017/10/09}{[\xiangxiang] Add example for figures in \texttt{iihw.tex}}
+% \changes{v1.2}{2017/10/09}{[\xiangxiang] Add example fro input matlab codes in \texttt{iihw.tex}}
+% \changes{v1.2}{2017/10/09}{[\xiangxiang] No need to set counter style manually}
+% \changes{v1.3}{2017/10/12}{[\xiangxiang] Add example for vector and random vectors(underline) in \texttt{iihw.tex}}
+% \changes{v1.4}{2017/10/30}{[\xiangxiang] Add an example of hypothesis testing in \texttt{iihw.tex}}
+% \def\indexname{索引}
+% \def\glossaryname{修改记录}
+% \IndexPrologue{\section{\indexname}}
+% \GlossaryPrologue{\section{\glossaryname}}
+% \title{\bfseries\color{violet}\thucoursework：清华大学课程作业模板\thanks{本文档在 \textit{xueruini} 的 \href{https://github.com/xueruini/thuthesis}{\enspace \textsc{Thu}\-\textsc{Thesis}} 手册基础上进行改动}}
+% \author{{\fangsong 赵丰\thanks{师兄徐祥祥维护到v1.4}}\\[5pt]\texttt{616545598@qq.com}}
+% \date{v\fileversion\ (\filedate)}
+% \maketitle\thispagestyle{empty}
+%
+%
+% \begin{abstract}\noindent
+%   此宏包旨在建立一个简单易用的清华大学课程作业模板，作业主要针对理论物理、数学、信息科学、通信、理论力学等方面。
+% \end{abstract}
+%
+% \vskip2cm
+% \def\abstractname{免责声明}
+% \begin{abstract}
+% \noindent
+% \begin{enumerate}
+% \item 本模板的发布遵守 \LaTeX\ Project Public License，使用前请认真阅读协议内
+%   容。
+% \item 任何个人或组织以本模板为基础进行修改、扩展而生成的新的专用模板，请严格遵
+%   守 \LaTeX\ Project Public License 协议。由于违犯协议而引起的任何纠纷争端均与
+%   本模板作者无关。
+% \end{enumerate}
+% \end{abstract}
+%
+%
+% \clearpage
+% \pagestyle{fancy}
+% \begin{multicols}{2}[
+%   \setlength{\columnseprule}{.4pt}
+%   \setlength{\columnsep}{18pt}]
+%   \tableofcontents
+% \end{multicols}
+% \clearpage
+%
+% \section{模板介绍}
+% \thucoursework\ (\textbf{T}sing\textbf{h}ua \textbf{U}niversity \LaTeX\
+% \textbf{Coursework} Template) 是为了帮助清华大学学生撰写课程作业而编写
+% 的 \LaTeX\ 模板。最初由徐祥祥师兄担任\textit{Information Inference} 这门课助教期间设计出来，当时命名为\texttt{idef.sty}。后来由赵丰接手进行拓展和完善。
+% 本文档将尽量完整的介绍模板的使用方法，如有不清楚之处可以参考示例文档或者根据
+% 第~\ref{sec:howtoask} 节说明提问，有兴趣者都可以参与完善此手册，也非常欢迎对代
+% 码的贡献。
+
+% \section{安装}
+% \label{sec:installation}
+%
+%^^A 发行版 not updated yet, 2018/3/03 https://ctan.org/tex-archive/systems/texlive/tlnet/tlpkg
+% 阅读文档可以使用以下命令：
+% \begin{shell}
+% $ texdoc thucoursework
+% \end{shell}
+%
+% 如果要使用开发版，需自己下载，\thucoursework\ 相关链接：
+% \begin{itemize}
+% \item 主页：\href{https://github.com/zhaofeng-shu33/THU-coursework-template}{GitHub}
+% \item 下载：\href{https://www.ctan.org/pkg/thucoursework}{CTAN}
+% \end{itemize}
+%
+% \subsection{模板的组成}
+% 下表列出了 \thucoursework\ 的主要文件及其功能介绍：
+%
+% \begin{longtable}{l|p{8cm}}
+% \toprule
+% {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
+% \endfirsthead
+% \midrule
+% {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
+% \endhead
+% \endfoot
+% \endlastfoot
+% thucoursework.dtx & \textsc{DocStrip} 源文件（开发用）\\\midrule
+% iihw.tex & \xiangxiang 编写的使用模板的英文作业例子\\
+% ithw.tex & \zhaofeng 编写的使用模板的中文作业例子\\ \midrule
+% Makefile & Makefile\\
+%   & latexmk 配置文件 \\
+% README.md & Readme\\
+% \textbf{thucoursework.pdf} & 用户手册（本文档）\\\bottomrule
+% \end{longtable}
+%
+%
+% \subsection{生成模板sty文件和用户手册}
+% \label{sec:generate-cls}
+% \note[提示：]{若使用 linux 操作系统，可在含有\file{Makefile}的目录下直接运行 \texttt{make doc} 命令
+% 生成模板sty文件和用户手册}
+%
+% 在使用之前可以用下面的代码生成模板sty文件和用户手册：
+%
+% \begin{shell}
+% $ xelatex thucoursework.dtx
+% $ makeindex -s gind.ist -o thucoursework.ind thucoursework.idx
+% $ makeindex -s gglo.ist -o thucoursework.gls thucoursework.glo
+% $ xelatex thucoursework.dtx
+% $ xelatex thucoursework.dtx  % 生成说明文档 thucoursework.pdf
+% \end{shell}
+% 
+%
+%
+% \subsection{生成作业}
+% \label{sec:generate-coursework}
+% 本节介绍几种常见的生成作业的方法。用户可根据自己的情况选择，使用前请仿照例子里的tex文件，使用 
+% \begin{latex}
+% \usepackage{iidef}
+% \end{latex}
+% 引用宏包。
+% \subsubsection{\XeLaTeX}
+% \label{sec:xelatex}
+% 很多用户对 \LaTeX\ 命令执行的次数不太清楚。一个基本的原则是多次运行 \LaTeX\ 命
+% 令直至不再出现警告。下面给出生成示例文档的详细过程（\texttt{\#} 开头的行为注
+% 释），首先来看推荐的 \texttt{xelatex} 方式：
+% \begin{shell}
+% # 1. 发现里面的引用关系，文件后缀 .tex 可以省略
+% $ xelatex main
+%
+% # 2. 编译参考文件源文件，生成 bbl 文件
+% $ bibtex main
+%
+% # 3. 下面解决引用
+% $ xelatex main
+% $ xelatex main   # 此时生成完整的 pdf 文件
+% \end{shell}
+%
+% \subsubsection{PDF\LaTeX}
+% \label{sec:pdflatex}
+% 当仅使用英文完成课程作业时，可以使用 PDF\LaTeX，编译速度会快很多。按照第~\ref{sec:xelatex} 节的顺序执行即可，只是将命令中
+% \texttt{xelatex} 替换为 \texttt{pdflatex}。
+%
+% 需要注意的是 PDF\LaTeX\ 不能处理常见的 EPS 图形，需要先用 \texttt{epstopdf} 将其转化
+% 成 PDF。不过 PDF\LaTeX\ 增加了对 png，jpg 等格式的支持，比较方便。\TeX Live
+% 自从 2010 版本起自动调用 \texttt{epstopdf} 将 EPS 图形转化为 PDF。
+%
+% \subsubsection{latexmk}
+% \label{sec:latexmk}
+% \texttt{latexmk} 命令支持全自动生成 \LaTeX\ 编写的文档，并且支持使用不同的工具
+% 链来进行生成，它会自动运行多次工具直到交叉引用都被解决。下面给出了一个用
+% \texttt{latexmk} 调用 \texttt{xelatex} 生成最终文档的示例：
+% \begin{shell}
+% # 一句话就够了！
+% $ latexmk -xelatex Assignment
+% \end{shell}
+%
+% \subsubsection{make}
+% \label{sec:make}
+% \note[提示：]{使用 \texttt{make} 编译，需要配合linux 操作系统。}
+%
+%
+% \subsection{升级}
+% \label{sec:updgrade}
+%
+% \section{使用说明}
+% \label{sec:usage}
+% 本手册假定用户已经能处理一般的 \LaTeX\ 文档。如果
+% 从来没有接触过 \TeX\ 和 \LaTeX，建议先学习相关的基础知识。
+%
+% \subsection{关于提问}
+% \label{sec:howtoask}
+% 按照优先级推荐提问的位置如下：
+%
+% \begin{itemize}
+% \item \href{http://github.com/zhaofeng-shu33/thucoursework/issues}{Github Issues}
+% \item \href{http://bbs.ctex.org/nForum/#!board/TeX}{ctex 论坛}
+% \end{itemize}
+%
+% \subsection{示例文件}
+% \label{sec:userguide}
+%
+% 推荐新用户从模板自带的示例文档入手，里面包括了写作业用到的所有命令及其使用方法，
+% 只需要用自己的内容进行相应替换就可以。对于不清楚的命令可以查阅本手册。下面的例
+% 子描述了模板中作业的组织形式，来自于示例文档，具体内容可以参考模板附带
+% 的 \file{iihw.tex} 和 \file{ithw.tex}。
+%
+% \lstinputlisting[style=lstStyleLaTeX]{iihw.tex}
+%
+%
+% \subsection{作业选项}
+% \label{sec:option}
+%
+% \DescribeOption{thehwcnt}
+%   指定作业序号，
+%   为可选项。
+% \begin{latex}
+% % 使用默认序号1
+% \usepackage{iidef}
+%
+% % 指定序号为6
+% \usepackage[thehwcnt=6]{iidef}
+% \end{latex}
+%
+% \subsection{基本信息}\label{sec:basic_info}
+% \DescribeMacro{\thecourseinstitute}
+% 指定学校或学院，如果使用中文，请引用\pkg{ctex} 宏包。
+% \begin{latex}
+% % 指定学院是TBSI
+% \thecourseinstitute{Tsinghua-Berkeley Shenzhen Institute}
+%
+% % 指定中文名
+% \thecourseinstitute{清华大学电子工程系}
+% \end{latex}
+% 
+% \DescribeMacro{\thecoursename}
+% 指定课程名
+% \begin{latex}
+% % 指定课程名是 Information Inference
+% \thecoursename{Information Inference}
+% % 指定课程名是 "应用信息论"
+% \thecoursename{应用信息论}
+% \end{latex}
+%
+% \DescribeMacro{\theterm}
+% 指定学期
+% \begin{latex}
+% % English example
+% \theterm{Fall 2017}
+% % 中文示例
+% \theterm{2018年春季学期}
+% \end{latex}
+%
+% \DescribeMacro{\hwname}
+% 指定作业名，默认是 Homework
+% \begin{latex}
+% % English example
+% \hwname{Coursework}
+% % 中文示例
+% \hwname{作业}
+% \end{latex}
+% 
+% \subsection{标题}
+% \DescribeMacro{\courseheader}
+% 将其放在正文前面生成作业标题
+%
+% \note[提示：]{使用 \cs{courseheader} 前需使用~\ref{sec:basic_info}节描述的宏指定相关基本信息。并且使用了\cs{courseheader}无需再用 \LaTeX\ 里的\cs{maketitle}}
+% \begin{latex}
+% \begin{document}
+% \courseheader
+% \name{YOUR NAME}
+% \end{latex}    
+% \DescribeMacro{\name}
+%^^A manually indentation 
+% \indent 生成姓名、作业名、日期
+%
+% \note[提示：]{使用 \cs{name} 会直接在文档中输出姓名、作业名、日期，因此如果需要自定义作业名，需要在使用\cs{name} 前用 \cs{hwname} 指定作业名称}
+% \subsection{题目自动编号}
+% 建议使用嵌套的\texttt{enumerate} 环境对题目自动编号，可比较好的解决自动缩进的问题。
+% 本模板设置了一级列表为作业序号加题目序号，比如第6次作业第3题会排版成 \enspace 6.3.\enspace ，对于某一道题目的不同小问，默认是用(a),(b),(c) 进行
+% 顺序编排。
+% \begin{latex}
+%   \begin{enumerate}
+%    \item First Problem
+%    \item Second Problem
+%       \begin{enumerate}
+%          \item first question of the second problem
+%          \item second question of the second problem
+%       \end{enumerate}
+%   \end{enumerate}
+% \end{latex}
+% 
+% 如果需要改变默认的设置，比如不同小问使用罗马数字，则可以在正文开始之前使用
+% \begin{latex}
+% \setlist[enumerate,2]{label=\roman*.}
+% \end{latex}
+% 进行设置。
+%
+% \subsection{证明和解的环境}
+% \myentry{证明}
+% \DescribeEnv{proof}
+% \texttt{proof} 环境是 \pkg{amsthm} 宏包提供的，引用本模板后可以直接使用。
+% \begin{latex}
+%    \begin{proof}
+%      proof contents go here
+%    \end{proof}
+% \end{latex}
+%  在中文作业中，引用\pkg{ctex} 宏包
+%  后 “证明” 的环境会变成 中文，如果需要改变默认文字，可以在序言中使用 \cs{ctexset} 配置
+% \begin{latex}
+%   \ctexset{
+%       proofname = \heiti{证明} 
+%   }  
+%   \begin{document}
+% \end{latex}
+% \myentry{解}
+% \DescribeEnv{solution}
+% \texttt{solution} 环境是本模板提供的，用于回答“求解XXX”之类的问题。
+% \begin{latex}
+%    \begin{solution}
+%      solution contents go here
+%    \end{solution}
+% \end{latex}
+% \DescribeMacro{slname}
+% 在中文作业中，可能需要将 \texttt{solution} 环境默认的 \textit{solution.} 变成中文，为此可以将
+% \begin{latex}
+%    \slname{\heiti{解}}
+% \end{latex}          
+% 放在使用 \texttt{solution} 环境之前。
+% \subsection{常用数学符号}
+% 本文档预先定义了常用的数学符号，在\file{iihw.tex} 示例文件中对这些符号的使用有详细说明。
+% \section{致谢}
+% \label{sec:thanks}
+% 感谢师兄徐祥祥的最初的作业模板设计， \textsc{Thu}\-\textsc{Thesis} 宏包的文档源码。
+%
+% \StopEventually{\PrintChanges\PrintIndex}
+% \clearpage
+%
+% \section{实现细节}
+%
+% \subsection{基本信息}
+%    \begin{macrocode}
+%<*sty>
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesClass{iidef}
+[2018/3/30 2.3 Tsinghua University Coursework Template]
+%    \end{macrocode}
+% \subsection{装载宏包}
+% \label{sec:loadpackage}
+%
+% 引用的宏包和相应的定义。
+%    \begin{macrocode}
+%% configuration of nested enumerate env
+\RequirePackage{enumitem}
+%% set hwcount key-value option
+\RequirePackage{kvoptions}
+%% required by macro DeclareMathOperator
+\RequirePackage{amsmath}
+%% Set up page headers using with fancyhdr
+\RequirePackage{fancyhdr}
+%define the solution env with amsthm proof
+\RequirePackage{amsthm}
+%    \end{macrocode}
+%
+% 定义学期、学院、课程名，作业名
+%    \begin{macrocode}
+%% semester
+\def\@term{term}
+\newcommand{\theterm}[1]{\renewcommand\@term{#1}}
+%% institute
+\newcommand{\@courseinstitute}[1]{institute}
+\newcommand{\thecourseinstitute}[1]{\renewcommand\@courseinstitute{#1}}
+%% coursename
+\newcommand{\@coursename}[1]{coursename}
+\newcommand{\thecoursename}[1]{\renewcommand\@coursename{\textsc{#1}}}
+%% user can rewrite homework name
+\def\@hwname{Homework}
+\def\hwname#1{\renewcommand\@hwname{#1}}
+%    \end{macrocode}
+% \subsection{作业选项}
+%    \begin{macrocode}
+%% \iidef@thehwcnt = 1
+\DeclareStringOption[1]{thehwcnt}
+\ProcessKeyvalOptions*
+\def\thehwcnt{\iidef@thehwcnt}
+%    \end{macrocode}
+% \subsection{标题}
+% 定义 \cs{courseheader}
+%    \begin{macrocode}
+%% page header setup, distinguish between first page(plain style) 
+%% and second page on (runningpage style)
+%%***************************************************************************
+\newcommand{\courseheader}{
+\thispagestyle{plain}%first page use native plain style to suppress header
+\vspace*{-1in}
+\begin{center}
+\@courseinstitute\\
+\@coursename\\
+\@term
+\vspace*{0.1in}
+\hrule
+\end{center}
+\begin{center}
+  \underline{\bf \@hwname\;\thehwcnt} \\
+\end{center}
+}
+\fancypagestyle{runningpage}
+{
+  \fancyhead[L]{\small\@coursename}
+  \fancyhead[R]{\small\@courseinstitute}
+}
+%% use runningpage style from second page on 
+\pagestyle{runningpage}
+%% *********************************************************************************************
+%    \end{macrocode}
+%
+% 定义 \cs{name}
+%    \begin{macrocode}
+%%name command macro
+%%*************************
+\newcommand{\name}[1]{
+\begin{flushleft}
+  #1\hfill
+  \today
+\end{flushleft}
+\hrule
+
+\vspace{2em}
+
+\flushleft
+}
+%%*************************
+%    \end{macrocode}
+% \subsection{题目自动编号}
+%    \begin{macrocode}
+%% enumitem related configuration
+\setlist[enumerate,1]{label=\thehwcnt.\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=\roman*.}
+\setlist[enumerate,4]{label=\greek*}
+%    \end{macrocode}
+% \subsection{解的环境}
+% 包装 \pkg{amsthm} 的 \cs{proof}，可以通过 \cs{slname} 对默认”解“的文字进行修改。 
+%    \begin{macrocode}
+%%******************************
+\def\@slname{Solution}
+\def\slname#1{\renewcommand\@slname{#1}}
+
+\newenvironment{solution}
+{
+\proof[\@slname]
+}
+{
+%% no qed symbol in solution env
+\renewcommand{\qedsymbol}{}
+\endproof
+}
+%%******************************
+%    \end{macrocode}
+% \subsection{常用数学符号}
+%    \begin{macrocode}
+%%common math symbols go here
+%%*************************************************
+\def\v#1{\underline{#1}}
+\newcommand{\uc}{\underline{c}}    % c, vec
+\newcommand{\uv}{\underline{v}}    % x, vec
+\newcommand{\uw}{\underline{w}}    % w, vec
+\newcommand{\ux}{\underline{x}}    % x, vec
+\newcommand{\uy}{\underline{y}}    % y, vec
+\newcommand{\uz}{\underline{z}}    % z, vec
+\newcommand{\um}{\underline{m}}    % m, vec
+\newcommand{\rvx}{\mathsf{x}}    % x, r.v.
+\newcommand{\rvy}{\mathsf{y}}    % y, r.v.
+\newcommand{\rvz}{\mathsf{z}}    % z, r.v.
+\newcommand{\rvw}{\mathsf{w}}    % w, r.v.
+\newcommand{\rvH}{\mathsf{H}}    % H, r.v.
+\newcommand{\urvx}{\underline{\mathsf{x}}}    % x, r.v. vec
+\newcommand{\urvy}{\underline{\mathsf{y}}}    % y, r.v. vec
+\newcommand{\urvz}{\underline{\mathsf{z}}}    % z, r.v. vec
+\newcommand{\urvw}{\underline{\mathsf{w}}}    % w, r.v. vec
+
+\newcommand{\defas}{\triangleq} %\coloneqq
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\TT}{\mathrm{T}}    % transpose
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argsup}{arg\,sup}
+\DeclareMathOperator*{\arginf}{arg\,inf}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\MSE}{MSE}
+\DeclareMathOperator{\1}{\mathds{1}}
+\DeclareMathOperator{\In}{\mathbb{I}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Prob}{\mathbb{P}}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+%%************************************************************************************
+%    \end{macrocode}
+% \Finale
+%
+\endinput
