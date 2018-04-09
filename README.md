@@ -7,6 +7,7 @@ Notice that the package itself does not import ctex package, to use it with Chin
 ## Features
 
  * support custom courseheader
+ * automatic header setting
  * support coursework counter
  * definition of common math symbols
 
@@ -17,6 +18,9 @@ Notice that the package itself does not import ctex package, to use it with Chin
 ## Usage
 
 `\usepackage{iidef}` and you are ready to go!
+
+## Help
+  see manual `thucoursework.pdf`
 
 ## Sample File
 

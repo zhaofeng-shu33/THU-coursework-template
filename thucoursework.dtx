@@ -256,6 +256,7 @@ through LaTeX.
 % 推荐新用户从模板自带的示例文档入手，里面包括了写作业用到的所有命令及其使用方法，
 % 只需要用自己的内容进行相应替换就可以。对于不清楚的命令可以查阅本手册。下面的例
 % 子描述了模板中作业的组织形式，来自于示例文档，具体内容可以参考模板附带
+% \changes{v2.3}{2018/03/30}{[\zhaofeng] Add sample file \file{ithw.tex}}
 % 的 \file{iihw.tex} 和 \file{ithw.tex}。
 %
 % \lstinputlisting[style=lstStyleLaTeX]{iihw.tex}
@@ -393,6 +394,7 @@ through LaTeX.
 %
 % \subsection{基本信息}
 %    \begin{macrocode}
+% \changes{v2.0}{2018/03/22}{[\zhaofeng] Make it a latex package(.sty)}
 %<*sty>
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{iidef}
@@ -416,6 +418,7 @@ through LaTeX.
 %    \end{macrocode}
 %
 % 定义学期、学院、课程名，作业名
+% \changes{v2.3}{2018/03/30}{[\zhaofeng] User configuration of \cs{hwname}}
 %    \begin{macrocode}
 %% semester
 \def\@term{term}
@@ -431,6 +434,7 @@ through LaTeX.
 \def\hwname#1{\renewcommand\@hwname{#1}}
 %    \end{macrocode}
 % \subsection{作业选项}
+% \changes{v2.1}{2018/03/22}{[\zhaofeng] Use kvoptions to set the coursework counter.}
 %    \begin{macrocode}
 %% \iidef@thehwcnt = 1
 \DeclareStringOption[1]{thehwcnt}
@@ -439,6 +443,7 @@ through LaTeX.
 %    \end{macrocode}
 % \subsection{标题}
 % 定义 \cs{courseheader}
+% \changes{v2.2}{2018/03/27}{[\zhaofeng] Use fancyhdr to set the coursework user file header.}
 %    \begin{macrocode}
 %% page header setup, distinguish between first page(plain style) 
 %% and second page on (runningpage style)
@@ -493,6 +498,8 @@ through LaTeX.
 \setlist[enumerate,4]{label=\greek*}
 %    \end{macrocode}
 % \subsection{解的环境}
+% \changes{v2.3}{2018/03/30}{[\zhaofeng] Add \texttt{solution} environment}
+% \changes{v2.3}{2018/03/30}{[\zhaofeng] user configuration of \texttt{solution} environment name}
 % 包装 \pkg{amsthm} 的 \cs{proof}，可以通过 \cs{slname} 对默认”解“的文字进行修改。 
 %    \begin{macrocode}
 %%******************************

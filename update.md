@@ -33,4 +33,4 @@ v2.3
 - User configuration of Homework
 - Add solution environment
 - User configuration of solution environment name
-- Add sample file `hthw.tex`
+- Add sample file `ithw.tex`
