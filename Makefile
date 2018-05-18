@@ -43,10 +43,10 @@ iihw.pdf: iihw.tex after_install_dep
 ithw.pdf: ithw.tex after_install_dep
 	xelatex ithw.tex
 
-archieve:
+archive:
 	# make tar.gz which is submitted to ctan.org
 	# first copy the necessary files to the dist dir
-	cp iidef.sty iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps README.md LICENSE.md update.md thucoursework/ 
+	cp dtx-style.sty iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/ 
 	# then tar it
 	tar -cvf thucoursework.tar.gz thucoursework/
 doc : $(PACKAGE).pdf
