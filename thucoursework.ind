@@ -1,0 +1,226 @@
+
+ \begin{theindex} 
+ \makeatletter\scan@allowedfalse
+{\bfseries\hfil Symbols\hfil}\nopagebreak
+
+  \item \verb*+\,+\pfill \hdclindex{138}{}{113}, \hdclindex{139}{}{114}, 
+		\hdclindex{140}{}{115}, \hdclindex{141}{}{116}
+  \item \verb*+\;+\pfill \hdclindex{70}{}{46}
+  \item \verb*+\@courseinstitute+\pfill \hdclindex{44}{}{20}, 
+		\hdclindex{45}{}{21}, \hdclindex{63}{}{39}, 
+		\hdclindex{76}{}{52}
+  \item \verb*+\@coursename+\pfill \hdclindex{47}{}{23}, 
+		\hdclindex{48}{}{24}, \hdclindex{64}{}{40}, 
+		\hdclindex{75}{}{51}
+  \item \verb*+\@hwname+\pfill \hdclindex{50}{}{26}, 
+		\hdclindex{51}{}{27}, \hdclindex{70}{}{46}
+  \item \verb*+\@slname+\pfill \hdclindex{102}{}{77}, 
+		\hdclindex{103}{}{78}, \hdclindex{107}{}{82}
+  \item \verb*+\@term+\pfill \hdclindex{41}{}{17}, \hdclindex{42}{}{18}, 
+		\hdclindex{65}{}{41}
+  \item \verb*+\\+\pfill \hdclindex{63}{}{39}, \hdclindex{64}{}{40}, 
+		\hdclindex{70}{}{46}
+
+  \indexspace
+{\bfseries\hfil Numbers\hfil}\nopagebreak
+
+  \item \verb*+\1+\pfill \hdclindex{146}{}{121}
+
+  \indexspace
+{\bfseries\hfil A\hfil}\nopagebreak
+
+  \item \verb*+\alph+\pfill \hdclindex{97}{}{73}
+  \item {\ttfamily amsthm} (package)\pfill \hdclindex{19}{usage}{10}, 
+		\hdclindex{100}{usage}{14}
+  \item \verb*+\arabic+\pfill \hdclindex{96}{}{72}
+  \item \verb*+\arginf+\pfill \hdclindex{141}{}{116}
+  \item \verb*+\argmax+\pfill \hdclindex{138}{}{113}
+  \item \verb*+\argmin+\pfill \hdclindex{139}{}{114}
+  \item \verb*+\argsup+\pfill \hdclindex{140}{}{115}
+
+  \indexspace
+{\bfseries\hfil B\hfil}\nopagebreak
+
+  \item \verb*+\bf+\pfill \hdclindex{70}{}{46}
+
+  \indexspace
+{\bfseries\hfil C\hfil}\nopagebreak
+
+  \item \verb*+\changes+\pfill \hdclindex{25}{}{1}
+  \item \verb*+\coloneqq+\pfill \hdclindex{135}{}{110}
+  \item \verb*+\courseheader+\pfill \hdclindex{15}{usage}{10}, 
+		\hdclindex{59}{}{35}
+  \item \verb*+\Cov+\pfill \hdclindex{144}{}{119}
+  \item {\ttfamily ctex} (package)\pfill \hdclindex{7}{usage}{9}, 
+		\hdclindex{20}{usage}{11}
+
+  \indexspace
+{\bfseries\hfil D\hfil}\nopagebreak
+
+  \item \verb*+\DeclareMathOperator+\pfill \hdclindex{138}{}{113}, 
+		\hdclindex{139}{}{114}, \hdclindex{140}{}{115}, 
+		\hdclindex{141}{}{116}, \hdclindex{142}{}{117}, 
+		\hdclindex{143}{}{118}, \hdclindex{144}{}{119}, 
+		\hdclindex{145}{}{120}, \hdclindex{146}{}{121}, 
+		\hdclindex{147}{}{122}, \hdclindex{148}{}{123}, 
+		\hdclindex{149}{}{124}
+  \item \verb*+\defas+\pfill \hdclindex{135}{}{110}
+  \item \verb*+\diag+\pfill \hdclindex{142}{}{117}
+
+  \indexspace
+{\bfseries\hfil E\hfil}\nopagebreak
+
+  \item \verb*+\E+\pfill \hdclindex{148}{}{123}
+  \item \verb*+\endproof+\pfill \hdclindex{112}{}{87}
+  \item environments:\efill 
+ \subitem {\ttfamily proof}\pfill \hdclindex{18}{usage}{10}
+    \subitem {\ttfamily solution}\pfill \hdclindex{21}{usage}{11}
+
+  \indexspace
+{\bfseries\hfil F\hfil}\nopagebreak
+
+  \item file:\efill 
+ \subitem {\ttfamily iihw.tex}\pfill \hdclindex{2}{usage}{5}, 
+		\hdclindex{24}{usage}{11}
+    \subitem {\ttfamily ithw.tex}\pfill \hdclindex{3}{usage}{5}, 
+		\hdclindex{153}{usage}{15}
+    \subitem {\ttfamily Makefile}\pfill \hdclindex{1}{usage}{3}
+  \item \verb*+\flushleft+\pfill \hdclindex{92}{}{68}
+
+  \indexspace
+{\bfseries\hfil G\hfil}\nopagebreak
+
+  \item \verb*+\greek+\pfill \hdclindex{99}{}{75}
+
+  \indexspace
+{\bfseries\hfil H\hfil}\nopagebreak
+
+  \item \verb*+\hwname+\pfill \hdclindex{13}{usage}{10}, 
+		\hdclindex{51}{}{27}
+
+  \indexspace
+{\bfseries\hfil I\hfil}\nopagebreak
+
+  \item \verb*+\iidef@thehwcnt+\pfill \hdclindex{52}{}{28}, 
+		\hdclindex{55}{}{31}
+  \item {\ttfamily iihw.tex} (file)\pfill \hdclindex{2}{usage}{5}, 
+		\hdclindex{24}{usage}{11}
+  \item \verb*+\In+\pfill \hdclindex{147}{}{122}
+  \item \verb*+\independenT+\pfill \hdclindex{150}{}{125}, 
+		\hdclindex{151}{}{126}
+  \item \verb*+\independent+\pfill \hdclindex{150}{}{125}
+  \item {\ttfamily ithw.tex} (file)\pfill \hdclindex{3}{usage}{5}, 
+		\hdclindex{153}{usage}{15}
+
+  \indexspace
+{\bfseries\hfil M\hfil}\nopagebreak
+
+  \item {\ttfamily Makefile} (file)\pfill \hdclindex{1}{usage}{3}
+  \item \verb*+\mathbb+\pfill \hdclindex{136}{}{111}, 
+		\hdclindex{147}{}{122}, \hdclindex{148}{}{123}, 
+		\hdclindex{149}{}{124}
+  \item \verb*+\mathds+\pfill \hdclindex{146}{}{121}
+  \item \verb*+\mathrm+\pfill \hdclindex{137}{}{112}
+  \item \verb*+\mathsf+\pfill \hdclindex{125}{}{100}, 
+		\hdclindex{126}{}{101}, \hdclindex{127}{}{102}, 
+		\hdclindex{128}{}{103}, \hdclindex{129}{}{104}, 
+		\hdclindex{130}{}{105}, \hdclindex{131}{}{106}, 
+		\hdclindex{132}{}{107}, \hdclindex{133}{}{108}
+  \item \verb*+\MSE+\pfill \hdclindex{145}{}{120}
+
+  \indexspace
+{\bfseries\hfil N\hfil}\nopagebreak
+
+  \item \verb*+\name+\pfill \hdclindex{17}{usage}{10}, 
+		\hdclindex{83}{}{59}
+  \item \verb*+\newenvironment+\pfill \hdclindex{105}{}{80}
+
+  \indexspace
+{\bfseries\hfil O\hfil}\nopagebreak
+
+  \item option:\efill 
+ \subitem {\ttfamily thehwcnt}\pfill \hdclindex{4}{usage}{9}
+
+  \indexspace
+{\bfseries\hfil P\hfil}\nopagebreak
+
+  \item package:\efill 
+ \subitem {\ttfamily amsthm}\pfill \hdclindex{19}{usage}{10}, 
+		\hdclindex{100}{usage}{14}
+    \subitem {\ttfamily ctex}\pfill \hdclindex{7}{usage}{9}, 
+		\hdclindex{20}{usage}{11}
+  \item \verb*+\perp+\pfill \hdclindex{150}{}{125}
+  \item \verb*+\Prob+\pfill \hdclindex{149}{}{124}
+  \item \verb*+\ProcessKeyvalOptions+\pfill \hdclindex{54}{}{30}
+  \item \verb*+\proof+\pfill \hdclindex{107}{}{82}
+  \item {\ttfamily proof} (environment)\pfill \hdclindex{18}{usage}{10}
+
+  \indexspace
+{\bfseries\hfil Q\hfil}\nopagebreak
+
+  \item \verb*+\qedsymbol+\pfill \hdclindex{111}{}{86}
+
+  \indexspace
+{\bfseries\hfil R\hfil}\nopagebreak
+
+  \item \verb*+\reals+\pfill \hdclindex{136}{}{111}
+  \item \verb*+\roman+\pfill \hdclindex{98}{}{74}
+  \item \verb*+\rvH+\pfill \hdclindex{129}{}{104}
+  \item \verb*+\rvw+\pfill \hdclindex{128}{}{103}
+  \item \verb*+\rvx+\pfill \hdclindex{125}{}{100}
+  \item \verb*+\rvy+\pfill \hdclindex{126}{}{101}
+  \item \verb*+\rvz+\pfill \hdclindex{127}{}{102}
+
+  \indexspace
+{\bfseries\hfil S\hfil}\nopagebreak
+
+  \item \verb*+\slname+\pfill \hdclindex{23}{usage}{11}, 
+		\hdclindex{103}{}{78}
+  \item \verb*+\small+\pfill \hdclindex{75}{}{51}, \hdclindex{76}{}{52}
+  \item {\ttfamily solution} (environment)\pfill 
+		\hdclindex{21}{usage}{11}
+
+  \indexspace
+{\bfseries\hfil T\hfil}\nopagebreak
+
+  \item \verb*+\textsc+\pfill \hdclindex{48}{}{24}
+  \item \verb*+\thecourseinstitute+\pfill \hdclindex{6}{usage}{9}, 
+		\hdclindex{45}{}{21}
+  \item \verb*+\thecoursename+\pfill \hdclindex{9}{usage}{9}, 
+		\hdclindex{48}{}{24}
+  \item \verb*+\thehwcnt+\pfill \hdclindex{55}{}{31}, 
+		\hdclindex{70}{}{46}, \hdclindex{96}{}{72}
+  \item {\ttfamily thehwcnt} (option)\pfill \hdclindex{4}{usage}{9}
+  \item \verb*+\theterm+\pfill \hdclindex{11}{usage}{9}, 
+		\hdclindex{42}{}{18}
+  \item \verb*+\today+\pfill \hdclindex{86}{}{62}
+  \item \verb*+\triangleq+\pfill \hdclindex{135}{}{110}
+  \item \verb*+\TT+\pfill \hdclindex{137}{}{112}
+
+  \indexspace
+{\bfseries\hfil U\hfil}\nopagebreak
+
+  \item \verb*+\uc+\pfill \hdclindex{118}{}{93}
+  \item \verb*+\um+\pfill \hdclindex{124}{}{99}
+  \item \verb*+\urvw+\pfill \hdclindex{133}{}{108}
+  \item \verb*+\urvx+\pfill \hdclindex{130}{}{105}
+  \item \verb*+\urvy+\pfill \hdclindex{131}{}{106}
+  \item \verb*+\urvz+\pfill \hdclindex{132}{}{107}
+  \item \verb*+\uv+\pfill \hdclindex{119}{}{94}
+  \item \verb*+\uw+\pfill \hdclindex{120}{}{95}
+  \item \verb*+\ux+\pfill \hdclindex{121}{}{96}
+  \item \verb*+\uy+\pfill \hdclindex{122}{}{97}
+  \item \verb*+\uz+\pfill \hdclindex{123}{}{98}
+
+  \indexspace
+{\bfseries\hfil V\hfil}\nopagebreak
+
+  \item \verb*+\v+\pfill \hdclindex{117}{}{92}
+  \item \verb*+\Var+\pfill \hdclindex{143}{}{118}
+
+  \indexspace
+{\bfseries\hfil Z\hfil}\nopagebreak
+
+  \item \verb*+\zhaofeng+\pfill \hdclindex{25}{}{1}
+
+ \end{theindex}

@@ -1,0 +1,14 @@
+This is makeindex, version 2.15 [TeX Live 2018] (kpathsea + Thai support).
+Scanning style file /usr/local/texlive/2018/texmf-dist/makeindex/latex/gglo.ist........
+** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/latex/gglo.ist, line = 66):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/latex/gglo.ist, line = 67):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/latex/gglo.ist, line = 68):
+   -- Unknown specifier lethead_flag.
+......done (14 attributes redefined, 3 ignored).
+Scanning input file thucoursework.glo....done (14 entries accepted, 0 rejected).
+Sorting entries....done (50 comparisons).
+Generating output file thucoursework.gls....done (43 lines written, 0 warnings).
+Output written in thucoursework.gls.
+Transcript written in thucoursework.ilg.
