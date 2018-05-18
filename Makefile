@@ -35,7 +35,7 @@ $(INSTALL_PACKAGE):
 
 clean: 
 	rm -fr $(INSTALL_DIR)
-	rm -f *.idx *.ilg *.glo *.gls *.hd *.ind *.log *.out *.synctex.gz *.toc
+	rm -f *.idx *.ilg *.glo *.gls *.hd *.ind *.log *.out *.synctex.gz *.toc *.aux
 
 iihw.pdf: iihw.tex after_install_dep
 	pdflatex iihw.tex
