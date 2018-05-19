@@ -46,12 +46,12 @@ ithw.pdf: ithw.tex after_install_dep
 archive:
 	# make tar.gz which is submitted to ctan.org
 	# first copy the necessary files to the dist dir
-	cp dtx-style.sty iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/ 
+	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/ 
 	# then tar it
-	tar -cvf thucoursework.tar.gz thucoursework/
+	tar -zcvf thucoursework.tar.gz thucoursework/
 doc : $(PACKAGE).pdf
 
-$(PACKAGE).pdf : $(PACKAGE).dtx dtx-style.sty
+$(PACKAGE).pdf : $(PACKAGE).dtx
 	#latexmk $(LATEXXMKOPTS) $(PACKAGE).dtx
 	xelatex $(PACKAGE).dtx
 	makeindex -s gind.ist -o $(PACKAGE).ind $(PACKAGE).idx
