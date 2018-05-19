@@ -48,7 +48,7 @@ archive:
 	# first copy the necessary files to the dist dir
 	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/ 
 	# then tar it
-	tar -zcvf thucoursework.tar.gz thucoursework/
+	COPYFILE_DISABLE=1 tar -zcvf thucoursework.tar.gz thucoursework/
 doc : $(PACKAGE).pdf
 
 $(PACKAGE).pdf : $(PACKAGE).dtx
