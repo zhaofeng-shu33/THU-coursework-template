@@ -15,6 +15,16 @@ Notice that the package itself does not import ctex package, to use it with Chin
 
  * automatic enumerate environment labeling and reference
 
+## Compiler from source
+
+Use `make doc` or run the following commands one by one:
+
+    xelatex thucoursework.dtx
+    makeindex -s gind.ist -o thucoursework.ind thucoursework.idx
+    makeindex -s gglo.ist -o thucoursework.gls thucoursework.glo
+    xelatex thucoursework.dtx
+    xelatex thucoursework.dtx
+
 ## Usage
 
 `\usepackage{iidef}` and you are ready to go!
