@@ -37,10 +37,10 @@ clean:
 	rm -fr $(INSTALL_DIR)
 	rm -f *.idx *.ilg *.glo *.gls *.hd *.ind *.log *.out *.synctex.gz *.toc *.aux
 
-iihw.pdf: iihw.tex after_install_dep
+iihw.pdf: iihw.tex
 	pdflatex iihw.tex
 
-ithw.pdf: ithw.tex after_install_dep
+ithw.pdf: ithw.tex
 	xelatex ithw.tex
 
 archive:

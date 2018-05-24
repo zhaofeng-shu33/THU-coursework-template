@@ -15,7 +15,7 @@ Notice that the package itself does not import ctex package, to use it with Chin
 
  * automatic enumerate environment labeling and reference
 
-## Compiler from source
+## Compile from source
 
 Use `make doc` or run the following commands one by one:
 
@@ -42,6 +42,6 @@ Use `make doc` or run the following commands one by one:
  TA xiangxiangxu revised this template, zhaofeng-shu33 made it a latex package.
 
 ## License
- see [LICENSE.md](LICENSE.md) for detail.
+ This project is licensed by The LaTeX Project Public Li­cense.
 
 
