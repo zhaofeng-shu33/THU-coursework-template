@@ -1,5 +1,6 @@
 # THU coursework Template
 [![Build Status](https://www.travis-ci.org/zhaofeng-shu33/THU-coursework-template.svg?branch=master)](https://www.travis-ci.org/zhaofeng-shu33/THU-coursework-template)
+
 LaTeX package for students in Tsinghua University to write coursework more efficiently, also can be used by students from other university.
 
 Notice that the package itself does not import ctex package, to use it with Chinese writing, see example file `ithw.tex` for detail.
