@@ -40,7 +40,7 @@ Use `make doc` or run the following commands one by one:
 
 ## Contributors
 
- TA xiangxiangxu revised this template, zhaofeng-shu33 made it a latex package.
+ [Xiangxiang Xu](https://xiangxiangxu.com/) revised this template, zhaofeng-shu33 made it a latex package.
 
 ## License
  This project is licensed by The LaTeX Project Public Li­cense.
