@@ -46,7 +46,7 @@ ithw.pdf: ithw.tex after_install_dep
 archive:
 	# make tar.gz which is submitted to ctan.org
 	# first copy the necessary files to the dist dir
-	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/
+	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.pdf thucoursework.dtx thucoursework.pdf Makefile thucoursework/
 	# then tar it
 	COPYFILE_DISABLE=1 tar -zcvf thucoursework.tar.gz thucoursework/
 doc : $(PACKAGE).pdf
