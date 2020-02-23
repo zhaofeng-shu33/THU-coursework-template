@@ -24,7 +24,7 @@ after_install_dep: install_dep
 	$(eval export PATH :=$(PLATFORM3)/texlive/bin/$(PLATFORM2):$(PATH))
 	echo $$PATH	
 	# to make tlmgr work, we need perl
-	tlmgr install xkeyval matlab-prettifier caption doublestroke xcolor listings l3kernel l3packages ms ulem fontspec environ trimspaces booktabs moreenum mathtools oberdiek enumitem fmtcount etoolbox latex-bin
+	tlmgr install xkeyval matlab-prettifier caption doublestroke xcolor listings l3kernel l3packages ms ulem fontspec environ trimspaces booktabs moreenum mathtools oberdiek enumitem fmtcount etoolbox latex-bin oberdiek
 install_dep: pre_install_dep
 	mkdir -p $(INSTALL_DIR)
 	tar -zxvf $(INSTALL_PACKAGE) -C $(INSTALL_DIR) --strip-components 1 
@@ -37,16 +37,16 @@ clean:
 	rm -fr $(INSTALL_DIR)
 	rm -f *.idx *.ilg *.glo *.gls *.hd *.ind *.log *.out *.synctex.gz *.toc *.aux
 
-iihw.pdf: iihw.tex
+iihw.pdf: iihw.tex after_install_dep
 	pdflatex iihw.tex
 
-ithw.pdf: ithw.tex
+ithw.pdf: ithw.tex after_install_dep
 	xelatex ithw.tex
 
 archive:
 	# make tar.gz which is submitted to ctan.org
 	# first copy the necessary files to the dist dir
-	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/ 
+	cp README.md iihw.pdf ithw.pdf iihw.tex ithw.tex matlabscript.m pdf_normal.eps thucoursework.dtx thucoursework.pdf Makefile thucoursework/
 	# then tar it
 	COPYFILE_DISABLE=1 tar -zcvf thucoursework.tar.gz thucoursework/
 doc : $(PACKAGE).pdf

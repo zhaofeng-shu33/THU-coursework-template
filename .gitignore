@@ -1,0 +1,16 @@
+build
+thucoursework/*
+.DS_Store
+*.tar.gz
+*.aux
+*.glo
+*.gls
+*.hd
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.synctex.gz
+*.toc
+
