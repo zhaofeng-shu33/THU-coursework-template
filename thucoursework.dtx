@@ -415,7 +415,8 @@ through LaTeX.
 %% required by macro DeclareMathOperator
 \RequirePackage{amsmath}
 %% Set up page headers using with fancyhdr
-\RequirePackage{fancyhdr}
+\@ifundefined{lhead}{\RequirePackage{fancyhdr}}
+{\def\@thulhead{thulhead}}
 %define the solution env with amsthm proof
 \RequirePackage{amsthm}
 %    \end{macrocode}
@@ -465,6 +466,7 @@ through LaTeX.
   \underline{\bf \@hwname\;\thehwcnt} \\
 \end{center}
 }
+\@ifundefined{@thulhead}{
 \fancypagestyle{runningpage}
 {
   \fancyhead[L]{\small\@coursename}
@@ -472,6 +474,7 @@ through LaTeX.
 }
 %% use runningpage style from second page on 
 \pagestyle{runningpage}
+}
 %% *********************************************************************************************
 %    \end{macrocode}
 %
@@ -509,6 +512,7 @@ through LaTeX.
 \def\@slname{Solution}
 \def\slname#1{\renewcommand\@slname{#1}}
 
+\@ifundefined{solution}{
 \newenvironment{solution}
 {
 \proof[\@slname]
@@ -517,6 +521,7 @@ through LaTeX.
 %% no qed symbol in solution env
 \renewcommand{\qedsymbol}{}
 \endproof
+}
 }
 %%******************************
 %    \end{macrocode}
