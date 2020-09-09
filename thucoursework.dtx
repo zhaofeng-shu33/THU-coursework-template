@@ -56,7 +56,7 @@ through LaTeX.
 \endgroup
 %</internal>
 %<*driver>
-\ProvidesFile{thucoursework.dtx}[2020/02/23 2.5.1 Tsinghua University Coursework Template]
+\ProvidesFile{thucoursework.dtx}[2020/09/09 2.6 Tsinghua University Coursework Template]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -396,17 +396,18 @@ through LaTeX.
 % \section{实现细节}
 %
 % \subsection{基本信息}
-%    \begin{macrocode}
 % \changes{v2.0}{2018/03/22}{[\zhaofeng] Make it a latex package(.sty)}
+%    \begin{macrocode}
 %<*sty>
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{iidef}
-[2020/02/23 2.5.1 Tsinghua University Coursework Template]
+[2020/09/09 2.6 Tsinghua University Coursework Template]
 %    \end{macrocode}
 % \subsection{装载宏包}
 % \label{sec:loadpackage}
 %
 % 引用的宏包和相应的定义。
+% \changes{v2.6}{2020/09/09}{[\zhaofeng] support \texttt{exam} document class}
 %    \begin{macrocode}
 %% configuration of nested enumerate env
 \RequirePackage{enumitem}
